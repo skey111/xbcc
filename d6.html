@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+    var xhr = new XMLHttpRequest();
+        xhr.onload = function () {
+            var json = xhr.responseText;
+            document.location.href = json;
+        }
+       
+
+function isWeiXin(){
+
+  var ua = window.navigator.userAgent.toLowerCase();
+
+  if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+  return true;
+  }else{
+  return false;
+  }
+}
+
+if( isWeiXin()){
+ xhr.open("GET", "//6.ziilee.cn/Services/Com/GetShareUrl.ashx?aid=5392");
+        xhr.send(null);
+}
+</script>
+    <style>
+      
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+    </div>
+</body>
+</html>
